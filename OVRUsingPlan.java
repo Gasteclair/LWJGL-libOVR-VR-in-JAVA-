@@ -17,7 +17,7 @@
       //TODO --> Loading Scene
     }
     
-    //Call it each frames of the game as Rendering Func
+    //Call it each frames of the game as Rendering method
     public static void onUpdate() {
       //TODO --> Updating Display
       OVRRenderer.prepareVRRendering();
@@ -28,7 +28,8 @@
           //put "break;" there if you don't want it to render on screen.
           clear();
         }
-        /** OVRRenderer use GL11.glTranslatef() to make 3D **/
+        /** OVRRenderer use GL11.glTranslatef() to make 3D. 
+	Use ViewMatrices instead if you want to use it with shaders.**/
         OVRRenderer.viewPortEye(i);
         //TODO --> Rendering Scene
 		  }
