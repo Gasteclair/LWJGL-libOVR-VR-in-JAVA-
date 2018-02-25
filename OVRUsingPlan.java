@@ -14,12 +14,14 @@
       GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
 
       OVRRenderer.create();
+      OVRTracking.create();
       //TODO --> Loading Scene
     }
     
     //Call it each frames of the game as Rendering method
     public static void onUpdate() {
       //TODO --> Updating Display
+      OVRTracking.update();
       OVRRenderer.prepareVRRendering();
       clear();
       for(int i=0;i<3;i++) {
